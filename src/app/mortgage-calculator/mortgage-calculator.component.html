@@ -1,0 +1,18 @@
+<div className="content">
+  <form id="form">
+    <div>
+      <label for="principal">Principal:</label>
+      <input type="text" id="principal" [(value)]="principal" (change)="calculatePayment($event)"/>
+    </div>
+    <div>
+      <label for="years">Years:</label>
+      <input type="text" id="years" [(value)]="years" (change)="calculatePayment($event)"/>
+    </div>
+    <div>
+      <label for="rate">Rate:</label>
+      <input type="text" id="rate" [(value)]="rate" (change)="calculatePayment($event)"/>
+    </div>
+  </form>
+  <h2>Monthly Payment: <span className="currency">{{payment.monthlyPayment.toFixed(2).toLocaleString()}}</span></h2>
+  <app-amortization-chart [data]="payment.amortization"></app-amortization-chart>
+</div>

@@ -1,0 +1,25 @@
+<table>
+  <thead>
+  <tr>
+    <th>Year</th>
+    <th class="principal">Principal</th>
+    <th class="stretch"></th>
+    <th class="interest">Interest</th>
+    <th>Balance</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let yearDataItem of yearData">
+      <td>{{yearDataItem.index}}</td>
+      <td class="currency principal">{{yearDataItem.principalString}}</td>
+      <td class="stretch">
+        <div class="flex">
+          <div class="bar principal" [ngStyle]="{flex:yearDataItem.principalY,webkitFlex:yearDataItem.principalY,msFlex:yearDataItem.interestY}"></div>
+          <div class="bar interest" [ngStyle]="{flex:yearDataItem.interestY,webkitFlex:yearDataItem.interestY,msFlex:yearDataItem.interestY}"></div>
+        </div>
+      </td>
+      <td class="currency interest">{{yearDataItem.interestString}}</td>
+      <td class="currency">{{yearDataItem.balanceString}}</td>
+    </tr>
+  </tbody>
+</table>

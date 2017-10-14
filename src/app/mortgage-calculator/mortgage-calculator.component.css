@@ -1,0 +1,10 @@
+label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  margin-right: 4px;
+}
+
+.content {
+  padding: 20px;
+}
