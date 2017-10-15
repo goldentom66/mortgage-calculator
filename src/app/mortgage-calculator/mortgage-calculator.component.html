@@ -1,4 +1,4 @@
-<div className="content">
+<div class="content">
   <form id="form">
     <div>
       <label for="principal">Principal:</label>
@@ -13,6 +13,6 @@
       <input type="text" id="rate" [(value)]="rate" (change)="calculatePayment($event)"/>
     </div>
   </form>
-  <h2>Monthly Payment: <span className="currency">{{payment.monthlyPayment.toFixed(2).toLocaleString()}}</span></h2>
+  <h2>Monthly Payment: <span class="currency">{{payment.monthlyPayment.toFixed(2).toLocaleString()}}</span></h2>
   <app-amortization-chart [data]="payment.amortization"></app-amortization-chart>
 </div>

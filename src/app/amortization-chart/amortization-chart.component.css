@@ -13,8 +13,6 @@ td {
   padding: 0 .5rem;
 }
 
-
-
 th,
 td {
   border: solid 1px #EEEEEE !important;
@@ -54,8 +52,4 @@ td {
 .flex {
   display: -webkit-flex;
   display: flex;
-}
-
-.currency::before {
-  content:"$";
 }
